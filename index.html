@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jane Acupuncture - Traditional Korean medicine, acupuncture, and herbal care for pain relief, injury recovery, and whole-body wellness in Garden Grove, CA.">
+    <title>Jane Acupuncture | Acupuncture & Herbal Medicine in Garden Grove, CA</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <svg class="nav__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4C20 4 8 12 8 22C8 28.627 13.373 34 20 34C26.627 34 32 28.627 32 22C32 12 20 4 20 4Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M20 10C20 10 14 15 14 21C14 24.314 16.686 27 20 27C23.314 27 26 24.314 26 21C26 15 20 10 20 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <line x1="20" y1="27" x2="20" y2="36" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Jane Acupuncture</span>
+            </a>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#services" class="nav__link">Services</a></li>
+                <li><a href="#practitioner" class="nav__link">Dr. Chung</a></li>
+                <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+                <li><a href="#contact" class="nav__cta btn btn--primary">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__bg"></div>
+            <div class="hero__content container">
+                <div class="hero__text">
+                    <span class="hero__subtitle">Traditional Korean Medicine</span>
+                    <h1 class="hero__title">Healing Through<br><em>Ancient Wisdom</em></h1>
+                    <p class="hero__description">
+                        Experience the restorative power of acupuncture and herbal medicine.
+                        We treat the root cause, not just symptoms, guiding you toward
+                        lasting wellness and balance.
+                    </p>
+                    <div class="hero__ctas">
+                        <a href="#contact" class="btn btn--primary btn--lg">Schedule Your Visit</a>
+                        <a href="tel:7142935544" class="btn btn--outline btn--lg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            (714) 293-5544
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__image-frame">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+                             alt="Peaceful acupuncture treatment setting"
+                             loading="eager">
+                    </div>
+                    <div class="hero__image-accent"></div>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <span>Scroll to explore</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content">
+                        <span class="section__label">Our Philosophy</span>
+                        <h2 class="section__title">Personalized Care,<br><em>Rooted in Tradition</em></h2>
+                        <p class="about__text">
+                            At Jane Acupuncture, we believe true healing addresses the whole person—body,
+                            mind, and spirit. Drawing from centuries of Korean medical tradition, we create
+                            individualized treatment plans that work with your body's natural healing abilities.
+                        </p>
+                        <p class="about__text">
+                            Whether you're seeking relief from chronic pain, recovering from injury, or
+                            pursuing greater overall wellness, our approach focuses on understanding and
+                            treating the underlying causes of imbalance.
+                        </p>
+                        <div class="about__features">
+                            <div class="about__feature">
+                                <div class="about__feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Safe & Gentle</h4>
+                                    <p>Natural treatments with minimal side effects</p>
+                                </div>
+                            </div>
+                            <div class="about__feature">
+                                <div class="about__feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 6v6l4 2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Lasting Results</h4>
+                                    <p>Addressing root causes, not just symptoms</p>
+                                </div>
+                            </div>
+                            <div class="about__feature">
+                                <div class="about__feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Compassionate Care</h4>
+                                    <p>Your wellness journey, supported every step</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__images">
+                        <div class="about__image about__image--1">
+                            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80"
+                                 alt="Herbal medicine preparation" loading="lazy">
+                        </div>
+                        <div class="about__image about__image--2">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80"
+                                 alt="Natural healing herbs" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section section--alt" id="services">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">What We Offer</span>
+                    <h2 class="section__title">Our Services</h2>
+                    <p class="section__subtitle">
+                        Comprehensive treatments tailored to your unique health needs
+                    </p>
+                </div>
+
+                <div class="services__grid">
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="24" cy="24" r="4"/>
+                                <path d="M24 4v8M24 36v8M4 24h8M36 24h8"/>
+                                <path d="M9.86 9.86l5.66 5.66M32.48 32.48l5.66 5.66M9.86 38.14l5.66-5.66M32.48 15.52l5.66-5.66"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Acupuncture</h3>
+                        <p class="service-card__text">
+                            Traditional needle therapy to restore energy flow, reduce pain,
+                            and promote natural healing throughout the body.
+                        </p>
+                        <ul class="service-card__list">
+                            <li>Pain Management</li>
+                            <li>Stress Relief</li>
+                            <li>Digestive Health</li>
+                            <li>Sleep Improvement</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M24 4C24 4 12 14 12 26c0 6.627 5.373 12 12 12s12-5.373 12-12C36 14 24 4 24 4z"/>
+                                <path d="M24 14c0 0-6 5-6 12 0 3.314 2.686 6 6 6s6-2.686 6-6c0-7-6-12-6-12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Herbal Medicine</h3>
+                        <p class="service-card__text">
+                            Custom-formulated herbal remedies based on traditional Korean
+                            medicine to support your body's healing processes.
+                        </p>
+                        <ul class="service-card__list">
+                            <li>Custom Formulas</li>
+                            <li>Immune Support</li>
+                            <li>Hormonal Balance</li>
+                            <li>Energy Restoration</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="24" cy="24" r="18"/>
+                                <path d="M24 12v12l8 4"/>
+                                <circle cx="24" cy="24" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Cupping Therapy</h3>
+                        <p class="service-card__text">
+                            Ancient technique using suction cups to improve circulation,
+                            release muscle tension, and detoxify the body.
+                        </p>
+                        <ul class="service-card__list">
+                            <li>Muscle Recovery</li>
+                            <li>Back Pain Relief</li>
+                            <li>Improved Circulation</li>
+                            <li>Tension Release</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M24 4l6 12h12l-10 8 4 14-12-8-12 8 4-14-10-8h12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Moxibustion</h3>
+                        <p class="service-card__text">
+                            Warming therapy using dried mugwort to stimulate circulation
+                            and strengthen the body's vital energy.
+                        </p>
+                        <ul class="service-card__list">
+                            <li>Cold Conditions</li>
+                            <li>Joint Stiffness</li>
+                            <li>Digestive Issues</li>
+                            <li>Energy Boost</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="services__conditions">
+                    <h3>Conditions We Treat</h3>
+                    <div class="conditions__grid">
+                        <span class="condition-tag">Chronic Pain</span>
+                        <span class="condition-tag">Migraines & Headaches</span>
+                        <span class="condition-tag">Arthritis</span>
+                        <span class="condition-tag">Sciatica</span>
+                        <span class="condition-tag">Anxiety & Depression</span>
+                        <span class="condition-tag">Insomnia</span>
+                        <span class="condition-tag">Allergies</span>
+                        <span class="condition-tag">Digestive Disorders</span>
+                        <span class="condition-tag">Women's Health</span>
+                        <span class="condition-tag">Fertility Support</span>
+                        <span class="condition-tag">Sports Injuries</span>
+                        <span class="condition-tag">Post-Surgery Recovery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practitioner Section -->
+        <section class="practitioner section" id="practitioner">
+            <div class="container">
+                <div class="practitioner__grid">
+                    <div class="practitioner__image">
+                        <div class="practitioner__image-frame">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+                                 alt="Dr. Jane Chung, Licensed Acupuncturist" loading="lazy">
+                        </div>
+                        <div class="practitioner__accent"></div>
+                    </div>
+                    <div class="practitioner__content">
+                        <span class="section__label">Meet Your Practitioner</span>
+                        <h2 class="section__title">Dr. Jane Chung</h2>
+                        <p class="practitioner__credentials">MSOM, L.Ac — Licensed Acupuncturist & Herbalist</p>
+                        <p class="practitioner__bio">
+                            With over 15 years of experience in traditional Korean medicine, Dr. Chung
+                            brings a unique blend of ancient wisdom and modern understanding to every
+                            patient encounter. Her journey began in Seoul, where she trained under
+                            master practitioners before earning her Master of Science in Oriental Medicine.
+                        </p>
+                        <p class="practitioner__bio">
+                            Dr. Chung believes that every patient deserves to be heard and understood.
+                            She takes the time to listen to your concerns, understand your health history,
+                            and develop a treatment plan that honors both your immediate needs and
+                            long-term wellness goals.
+                        </p>
+                        <div class="practitioner__credentials-list">
+                            <div class="credential">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>Master of Science in Oriental Medicine (MSOM)</span>
+                            </div>
+                            <div class="credential">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>California Licensed Acupuncturist (L.Ac)</span>
+                            </div>
+                            <div class="credential">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>NCCAOM Board Certified</span>
+                            </div>
+                            <div class="credential">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>15+ Years Clinical Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section section--alt" id="testimonials">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Patient Stories</span>
+                    <h2 class="section__title">What Our Patients Say</h2>
+                </div>
+
+                <div class="testimonials__grid">
+                    <blockquote class="testimonial">
+                        <div class="testimonial__stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial__text">
+                            "After years of chronic back pain and countless doctor visits, Dr. Chung
+                            finally helped me find relief. Her approach is so different—she actually
+                            listened and treated me as a whole person. I'm now pain-free for the first
+                            time in a decade."
+                        </p>
+                        <footer class="testimonial__author">
+                            <span class="testimonial__name">Maria S.</span>
+                            <span class="testimonial__detail">Patient for 2 years</span>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial">
+                        <div class="testimonial__stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial__text">
+                            "I was skeptical about acupuncture at first, but Dr. Chung's gentle manner
+                            put me at ease. My migraines have decreased from weekly to maybe once a
+                            month. The herbal formulas she created for me have been life-changing."
+                        </p>
+                        <footer class="testimonial__author">
+                            <span class="testimonial__name">David L.</span>
+                            <span class="testimonial__detail">Patient for 1 year</span>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial">
+                        <div class="testimonial__stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="testimonial__text">
+                            "The clinic is so peaceful and calming. Every visit feels like a retreat.
+                            Dr. Chung helped me through a difficult pregnancy with her expertise in
+                            women's health. I can't recommend her highly enough."
+                        </p>
+                        <footer class="testimonial__author">
+                            <span class="testimonial__name">Jennifer K.</span>
+                            <span class="testimonial__detail">Patient for 3 years</span>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__info">
+                        <span class="section__label">Get In Touch</span>
+                        <h2 class="section__title">Begin Your<br><em>Healing Journey</em></h2>
+                        <p class="contact__text">
+                            Ready to experience the benefits of traditional Korean medicine?
+                            We'd love to hear from you. Schedule your consultation today.
+                        </p>
+
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Visit Us</h4>
+                                    <p>13341 Garden Grove Boulevard<br>Garden Grove, CA 92843</p>
+                                </div>
+                            </div>
+
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p><a href="tel:7142935544">(714) 293-5544</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Hours</h4>
+                                    <p>Monday – Friday: 9:00 AM – 5:00 PM<br>
+                                       Saturday: By Appointment<br>
+                                       Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__social">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Yelp">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact__form-wrapper">
+                        <form class="contact__form" id="contactForm">
+                            <h3>Request an Appointment</h3>
+                            <div class="form__group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                </div>
+                                <div class="form__group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="service">Service of Interest</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service...</option>
+                                    <option value="acupuncture">Acupuncture</option>
+                                    <option value="herbal">Herbal Medicine</option>
+                                    <option value="cupping">Cupping Therapy</option>
+                                    <option value="moxibustion">Moxibustion</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                            <div class="form__group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your health concerns..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full">
+                                Request Appointment
+                            </button>
+                            <p class="form__note">
+                                We'll respond within 24 hours to confirm your appointment.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.1234567890123!2d-117.9412345!3d33.7789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2789abcdef01%3A0x1234567890abcdef!2s13341%20Garden%20Grove%20Blvd%2C%20Garden%20Grove%2C%20CA%2092843!5e0!3m2!1sen!2sus!4v1234567890123"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Jane Acupuncture Location">
+            </iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">
+                        <svg class="footer__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4C20 4 8 12 8 22C8 28.627 13.373 34 20 34C26.627 34 32 28.627 32 22C32 12 20 4 20 4Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M20 10C20 10 14 15 14 21C14 24.314 16.686 27 20 27C23.314 27 26 24.314 26 21C26 15 20 10 20 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <line x1="20" y1="27" x2="20" y2="36" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>Jane Acupuncture</span>
+                    </a>
+                    <p>Healing through tradition, caring with experience. Traditional Korean medicine for modern wellness.</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#practitioner">Dr. Chung</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Acupuncture</a></li>
+                        <li><a href="#services">Herbal Medicine</a></li>
+                        <li><a href="#services">Cupping Therapy</a></li>
+                        <li><a href="#services">Moxibustion</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4>Contact</h4>
+                    <p>13341 Garden Grove Boulevard<br>Garden Grove, CA 92843</p>
+                    <p><a href="tel:7142935544">(714) 293-5544</a></p>
+                    <p>Mon–Fri: 9AM–5PM</p>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2024 Jane Acupuncture. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
