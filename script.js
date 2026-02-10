@@ -148,36 +148,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
             // Get form data
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData.entries());
 
-            // Simple validation
-            if (!data.name || !data.email) {
+            // Validation
+            if (!data.name || !data.email || !data.phone) {
+                e.preventDefault();
                 showNotification('Please fill in all required fields.', 'error');
                 return;
             }
 
             if (!isValidEmail(data.email)) {
+                e.preventDefault();
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
 
-            // Simulate form submission
+            // Show sending state (form will submit natively to Formsubmit.co)
             const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
-
-            // Simulate API call delay
-            setTimeout(() => {
-                showNotification('Thank you! We\'ll be in touch within 24 hours.', 'success');
-                contactForm.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 1500);
         });
     }
 

@@ -485,7 +485,11 @@
                     </div>
 
                     <div class="contact__form-wrapper">
-                        <form class="contact__form" id="contactForm">
+                        <form class="contact__form" id="contactForm" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+                            <input type="hidden" name="_subject" value="New Appointment Request">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_template" value="table">
                             <h3>Request an Appointment</h3>
                             <div class="form__group">
                                 <label for="name">Full Name</label>
@@ -498,7 +502,7 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+                                    <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
                                 </div>
                             </div>
                             <div class="form__group">
