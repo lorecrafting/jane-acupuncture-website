@@ -963,6 +963,22 @@ button {
     color: var(--color-text-muted);
 }
 
+/* Testimonials CTA */
+.testimonials__cta {
+    text-align: center;
+    margin-top: var(--space-2xl);
+}
+
+.testimonials__cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.testimonials__cta .btn svg {
+    flex-shrink: 0;
+}
+
 /* Testimonials Responsive */
 @media (max-width: 900px) {
     .testimonials__grid {
@@ -975,10 +991,20 @@ button {
 /* -----------------------------------------
    Contact Section
    ----------------------------------------- */
-.contact__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4xl);
+.contact__centered {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact__centered .section__label,
+.contact__centered .section__title {
+    text-align: center;
+}
+
+.contact__centered .section__label::after {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact__text {
@@ -992,11 +1018,13 @@ button {
     flex-direction: column;
     gap: var(--space-xl);
     margin-bottom: var(--space-2xl);
+    align-items: center;
 }
 
 .contact__item {
     display: flex;
     gap: var(--space-md);
+    text-align: left;
 }
 
 .contact__icon {
@@ -1136,17 +1164,17 @@ button {
     margin-top: var(--space-md);
 }
 
-/* Contact Responsive */
-@media (max-width: 900px) {
-    .contact__grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-3xl);
-    }
+.contact__centered .btn--lg {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
 }
 
-@media (max-width: 500px) {
-    .form__row {
-        grid-template-columns: 1fr;
+/* Contact Responsive */
+@media (max-width: 600px) {
+    .contact__centered .btn--lg {
+        width: 100%;
+        justify-content: center;
     }
 }
 

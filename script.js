@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const revealElements = document.querySelectorAll(
         '.section__header, .about__content, .about__images, ' +
         '.service-card, .practitioner__image, .practitioner__content, ' +
-        '.testimonial, .contact__info, .contact__form-wrapper'
+        '.testimonial, .contact__centered'
     );
 
     const revealOptions = {
@@ -140,134 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
     serviceCards.forEach(card => {
         staggerObserver.observe(card);
     });
-
-    // -----------------------------------------
-    // Contact Form Handling
-    // -----------------------------------------
-    const contactForm = document.getElementById('contactForm');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
-
-            // Validation
-            if (!data.name || !data.email || !data.phone) {
-                e.preventDefault();
-                showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-
-            if (!isValidEmail(data.email)) {
-                e.preventDefault();
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-
-            // Show sending state (form will submit natively to Formsubmit.co)
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-        });
-    }
-
-    function isValidEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    function showNotification(message, type) {
-        // Remove existing notifications
-        const existing = document.querySelector('.notification');
-        if (existing) existing.remove();
-
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification--${type}`;
-        notification.innerHTML = `
-            <span>${message}</span>
-            <button class="notification__close" aria-label="Close">&times;</button>
-        `;
-
-        // Style the notification
-        Object.assign(notification.style, {
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            padding: '16px 24px',
-            borderRadius: '8px',
-            backgroundColor: type === 'success' ? '#5B7B6D' : '#c44',
-            color: 'white',
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '14px',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-            zIndex: '9999',
-            animation: 'slideIn 0.3s ease'
-        });
-
-        // Add close button functionality
-        notification.querySelector('.notification__close').addEventListener('click', () => {
-            notification.remove();
-        });
-
-        // Add animation keyframes
-        if (!document.getElementById('notificationStyles')) {
-            const style = document.createElement('style');
-            style.id = 'notificationStyles';
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-                .notification__close {
-                    background: none;
-                    border: none;
-                    color: white;
-                    font-size: 24px;
-                    cursor: pointer;
-                    padding: 0;
-                    line-height: 1;
-                }
-            `;
-            document.head.appendChild(style);
-        }
-
-        document.body.appendChild(notification);
-
-        // Auto-remove after 5 seconds
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.style.animation = 'slideIn 0.3s ease reverse';
-                setTimeout(() => notification.remove(), 300);
-            }
-        }, 5000);
-    }
-
-    // -----------------------------------------
-    // Phone Number Formatting
-    // -----------------------------------------
-    const phoneInput = document.getElementById('phone');
-
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-
-            if (value.length > 0) {
-                if (value.length <= 3) {
-                    value = `(${value}`;
-                } else if (value.length <= 6) {
-                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-                } else {
-                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
-                }
-            }
-
-            e.target.value = value;
-        });
-    }
 
     // -----------------------------------------
     // Active Navigation Highlight
@@ -337,10 +209,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     conditionTags.forEach(tag => {
         tag.addEventListener('click', function() {
-            // Scroll to contact form when clicking a condition
+            // Scroll to contact section when clicking a condition
             const contactSection = document.getElementById('contact');
-            const serviceSelect = document.getElementById('service');
-            const messageField = document.getElementById('message');
 
             if (contactSection) {
                 const headerHeight = header.offsetHeight;
@@ -350,14 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-
-                // Pre-fill the message with the condition
-                setTimeout(() => {
-                    if (messageField) {
-                        messageField.value = `I'm interested in treatment for: ${tag.textContent}`;
-                        messageField.focus();
-                    }
-                }, 800);
             }
         });
     });
