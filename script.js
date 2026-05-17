@@ -53,19 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Header Scroll Effect
     // -----------------------------------------
     const header = document.getElementById('header');
-    let lastScroll = 0;
 
     function handleScroll() {
-        const currentScroll = window.pageYOffset;
-
-        // Add/remove scrolled class
-        if (currentScroll > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        lastScroll = currentScroll;
+        header.classList.toggle('scrolled', window.pageYOffset > 50);
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -223,27 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // -----------------------------------------
-    // Add CSS for Active Nav Link
-    // -----------------------------------------
-    const activeNavStyles = document.createElement('style');
-    activeNavStyles.textContent = `
-        .nav__link.active {
-            color: var(--color-primary);
-        }
-        .nav__link.active::after {
-            width: 100%;
-        }
-        img {
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        img.loaded, img[src]:not([data-src]) {
-            opacity: 1;
-        }
-    `;
-    document.head.appendChild(activeNavStyles);
 
     // Initialize loaded state for images without data-src
     document.querySelectorAll('img:not([data-src])').forEach(img => {
