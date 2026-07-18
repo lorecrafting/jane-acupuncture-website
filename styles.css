@@ -58,7 +58,7 @@
 
     /* Layout */
     --container-max: 1280px;
-    --container-padding: clamp(1rem, 5vw, 3rem);
+    --container-padding: clamp(1.5rem, 5vw, 3rem);
 
     /* Borders & Radius */
     --radius-sm: 4px;
@@ -332,7 +332,7 @@ button {
     flex-direction: column;
     gap: 5px;
     width: 28px;
-    padding: 4px 0;
+    padding: 10px 8px;
 }
 
 .nav__toggle span {
@@ -533,6 +533,11 @@ button {
 }
 
 @media (max-width: 600px) {
+    .hero__content {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+    }
+
     .hero__ctas {
         flex-direction: column;
     }
@@ -613,6 +618,7 @@ button {
 .about__images {
     position: relative;
     height: 500px;
+    overflow: hidden;
 }
 
 .about__image {
@@ -790,13 +796,17 @@ button {
 }
 
 /* Services Responsive */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .services__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
     .services__grid {
         grid-template-columns: 1fr;
     }
@@ -895,6 +905,17 @@ button {
     .practitioner__image-frame img {
         height: 450px;
     }
+
+    .practitioner__accent {
+        right: 0;
+        top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .practitioner__image-frame img {
+        height: 360px;
+    }
 }
 
 /* -----------------------------------------
@@ -967,6 +988,12 @@ button {
 }
 
 /* Testimonials Responsive */
+@media (max-width: 1024px) {
+    .testimonials__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 900px) {
     .testimonials__grid {
         grid-template-columns: 1fr;
@@ -1175,7 +1202,7 @@ button {
 /* Footer Responsive */
 @media (max-width: 900px) {
     .footer__grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--space-2xl);
     }
 
@@ -1224,6 +1251,26 @@ button {
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* -----------------------------------------
+   Reduced Motion
+   ----------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .fade-in-up {
+        animation: none;
+        opacity: 1;
+    }
+
+    img {
+        transition: none;
+    }
 }
 
 /* -----------------------------------------
